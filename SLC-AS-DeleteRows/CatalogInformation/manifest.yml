@@ -1,6 +1,9 @@
 type: Automation
 id: edc811cc-158a-4728-b270-311f8b3f0f8f
+
 title: Delete Rows
+
+source_code_url: https://github.com/SkylineCommunications/SLC-AS-DeleteRows
 
 owners:
   - name: Jan Staelens
