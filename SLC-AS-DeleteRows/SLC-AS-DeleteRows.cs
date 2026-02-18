@@ -72,7 +72,7 @@ namespace SLCASDeleteRows
 			}
 
 			var tableIdString = engine.GetScriptParam(11).Value.Trim().TrimStart('[', '"').TrimEnd('"', ']');
-			if (String.IsNullOrWhiteSpace(tableIdString) || Int32.TryParse(tableIdString, out int tableId))
+			if (String.IsNullOrWhiteSpace(tableIdString) || !Int32.TryParse(tableIdString, out int tableId))
 			{
 				engine.ExitFail($"Invalid Table ID: '{tableIdString}'");
 				return;
