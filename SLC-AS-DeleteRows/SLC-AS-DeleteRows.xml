@@ -16,13 +16,13 @@
 
 	<Parameters>
 		<ScriptParameter id="10" type="string" values="">
-			<Description>ElementIdentifier</Description>
+			<Description>Element Identifier</Description>
 		</ScriptParameter>
 		<ScriptParameter id="11" type="string" values="">
-			<Description>TableId</Description>
+			<Description>Table Identifier</Description>
 		</ScriptParameter>
 		<ScriptParameter id="12" type="string" values="">
-			<Description>PrimaryKey(s)</Description>
+			<Description>Primary Key(s)</Description>
 		</ScriptParameter>
 	</Parameters>
 

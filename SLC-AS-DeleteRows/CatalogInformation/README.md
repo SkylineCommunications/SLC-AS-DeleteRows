@@ -9,8 +9,8 @@ The script requires the following parameters:
 | Name | Description | Format |
 |------|-------------|--------|
 | Element Identifier | The element containing the table | Element name OR `DataMinerID/ElementID` (e.g., `123/456`) |
-| Table ID | The parameter ID of the table | Integer value (e.g., `1000`) |
-| Row Keys | The primary key(s) of the row(s) to delete | Comma or semicolon-separated list (e.g., `key1,key2,key3`) |
+| Table Identifier | The parameter ID of the table | Integer value (e.g., `1000`) |
+| Primary Key(s) | The primary key(s) of the row(s) to delete | Comma or semicolon-separated list (e.g., `key1,key2,key3`) |
 
 ### Parameter Details
 
@@ -18,9 +18,9 @@ The script requires the following parameters:
   - By element name (e.g., `MyElement`)
   - By DataMiner ID and Element ID (e.g., `123/456`)
   
-- **Table ID**: Must be a valid integer representing the parameter ID of the table in the element's protocol.
+- **Table Identifier**: Must be a valid integer representing the parameter ID of the table in the element's protocol.
 
-- **Row Keys**: Multiple row keys can be provided, separated by commas (`,`) or semicolons (`;`). Leading and trailing whitespace will be automatically trimmed.
+- **Primary Key(s)**: Multiple row keys can be provided, separated by commas (`,`) or semicolons (`;`). Leading and trailing whitespace will be automatically trimmed.
 
 These parameters can also be filled in via feeds from a GQI query, allowing for dynamic input based on query results.
 
