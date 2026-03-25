@@ -1,32 +1,25 @@
 # Delete Rows
 
+## About
+
 This script deletes one or more rows from a table in a DataMiner element. It is designed to be used with GQI (Generic Query Interface) or as a standalone automation script.
 
 ## Input Parameters
 
-The script requires the following parameters:
+The script requires the following input parameters:
 
 | Name | Description | Format |
-|------|-------------|--------|
-| Element Identifier | The element containing the table | Element name OR `DataMinerID/ElementID` (e.g., `123/456`) |
-| Table Identifier | The parameter ID of the table | Integer value (e.g., `1000`) |
-| Primary Key(s) | The primary key(s) of the row(s) to delete | Comma or semicolon-separated list (e.g., `key1,key2,key3`) |
+| ---- | ----------- | ------ |
+| Element Identifier | The element containing the table | - Element name (e.g., `MyElement`)<br>- DataMinerID/ElementID (e.g., `123/456`) |
+| Table Identifier | The parameter ID of the table | A valid integer representing the parameter ID of the table in the element's protocol (e.g., `1000`) |
+| Primary Key(s) | The primary key(s) of the row(s) to delete | If you provide multiple row keys, separate them by commas (`,`) or semicolons (`;`). For example, `key1,key2,key3`.<br>Leading and trailing whitespace will be automatically trimmed. |
 
-### Parameter Details
-
-- **Element Identifier**: Can be specified in two ways:
-  - By element name (e.g., `MyElement`)
-  - By DataMiner ID and Element ID (e.g., `123/456`)
-  
-- **Table Identifier**: Must be a valid integer representing the parameter ID of the table in the element's protocol.
-
-- **Primary Key(s)**: Multiple row keys can be provided, separated by commas (`,`) or semicolons (`;`). Leading and trailing whitespace will be automatically trimmed.
-
-These parameters can also be filled in via feeds from a GQI query, allowing for dynamic input based on query results.
+These parameters can also be filled in via a GQI query, allowing for dynamic input based on query results.
 
 ## Error Handling
 
-The script will exit with an error message if:
+The script can return the following error messages:
+
 - The element identifier is empty or invalid
 - The table ID is empty, whitespace, or not a valid integer
 - No valid row keys are provided
