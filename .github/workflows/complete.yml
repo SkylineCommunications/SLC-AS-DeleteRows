@@ -12,7 +12,7 @@ on:
 
 jobs:
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
       configuration: Release
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
